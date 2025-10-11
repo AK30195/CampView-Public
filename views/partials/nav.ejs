@@ -7,24 +7,23 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mx-auto">
-        <li class="nav-item">
-          <a class="nav-link <%= currentPage === 'home' ? 'active' : '' %>" aria-current="home" href="/">Home</a>
-        </li>
-        <li class="nav-item">
+        <li class="nav-item text-info text-lg">
           <a class="nav-link <%= currentPage === 'campgrounds' ? 'active' : '' %>" href="/campgrounds">Campgrounds</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link <%= currentPage === 'campgrounds/new' ? 'active' : '' %>" href="/campgrounds/new">Add Campground</a>
+          <a class="nav-link <%= currentPage === 'campgrounds/new' ? 'active' : '' %>" href="/campgrounds/new">Add
+            Campground</a>
         </li>
       </ul>
+      <div class="navbar-nav ml-auto">
+        <% if(!currentUser) { %>
+          <a href="/login" class="nav-link <%= currentPage === 'login' ? 'active' : '' %>">Login</a>
+          <a href="/register" class="nav-link <%= currentPage === 'register' ? 'active' : '' %>">Register</a>
+          <% } else { %>
+            <a href="/logout" class="nav-link">Logout</a>
+            <% } %>
+      </div>
     </div>
-    <div class="navbar-nav ml-auto">
-      <% if(!currentUser) { %>
-        <a href="/login" class="nav-link <%= currentPage === 'login' ? 'active' : '' %>">Login</a>
-        <a href="/register" class="nav-link <%= currentPage === 'register' ? 'active' : '' %>">Register</a>
-        <% } else { %>
-          <a href="/logout" class="nav-link">Logout</a>
-        <% } %>
-    </div>
+
   </div>
 </nav>

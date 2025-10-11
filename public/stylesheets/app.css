@@ -16,6 +16,10 @@
     text-decoration: underline;
 }
 
+.navbar-nav .nav-link {
+  font-size: 1.25rem;
+}
+
 .navbar-brand {
     font-size: 2rem;
     text-align: center;

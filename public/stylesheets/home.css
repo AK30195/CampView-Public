@@ -1,7 +1,7 @@
 
 main {
-    height: 100vh;
-    background-image: url("../images/bg.png");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+     url("../images/camp-bg.jpg");
     background-size: cover;
     background-position: center;
 }
